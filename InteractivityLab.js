@@ -37,7 +37,7 @@ function deleteMovie(event) {
    revealMessage()
    event.target.parentNode.remove();
 
-// }
+}
 
 function crossOffMovie(event) {
     event.target.classList.toggle('checked')
@@ -59,5 +59,4 @@ function revealMessage() {
     setTimeout(() => {
         message.classList.add('hide')
     }, 1000)
-}
 }

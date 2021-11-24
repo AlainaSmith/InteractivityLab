@@ -1,11 +1,12 @@
-document.querySelector("form").addEventListener("submit", addMovie);
+
+
 const message = document.querySelector('#message');
 
 
 
 function addMovie(event) {
   event.preventDefault();
-  let inputField = document.querySelector('input')
+  const inputField = document.querySelector('input')
 
 
   const movie = document.createElement('li')
@@ -25,10 +26,19 @@ function addMovie(event) {
   const list = document.querySelector("ul");
   list.appendChild(movie);
 
-  inputField.value = ''
+  inputField.value = '';
 
 
 }
+
+//document.querySelector("form").addEventListener("submit", addMovie);
+const formSelect = document.querySelector("form")
+
+formSelect.addEventListener("submit", addMovie)
+
+
+
+
 
 function deleteMovie(event) {
    message.textContent = `${event.target.parentNode.firstChild.textContent} deleted!` 
